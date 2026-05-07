@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaysavvy Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Jaysavvy Blog</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero/Home Section -->
+        <section id="home" class="hero">
+            <h2>Welcome to Jaysavvy Blog</h2>
+            <p>Exploring technology, ideas, and insights that matter.</p>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="blog-section">
+            <h2>Latest Articles</h2>
+            
+            <article class="blog-post">
+                <h3>The Future of AI</h3>
+                <p>Artificial intelligence is transforming industries at an unprecedented pace. From healthcare to autonomous vehicles, AI continues to push the boundaries of what's possible.</p>
+                <p>Understanding the ethical implications and potential societal impacts will be crucial as we move forward into this new era of innovation.</p>
+            </article>
+
+            <article class="blog-post">
+                <h3>Mastering Responsive Web Design</h3>
+                <p>Creating websites that look great on any device is no longer optional. Responsive design ensures optimal user experience across desktops, tablets, and mobile phones.</p>
+                <p>Flexbox and CSS Grid have revolutionized how we approach layout challenges, making complex designs more maintainable and intuitive.</p>
+            </article>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Me</h2>
+            <form action="#" method="POST" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Student ID: 773 &copy; 2026 Jaysavvy Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple form submission feedback
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been received. (This is a demo)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
