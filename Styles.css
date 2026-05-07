@@ -79,6 +79,7 @@ main {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     animation: fadeIn 0.8s ease forwards;
+    flex: 1;                    /* Makes both cards same height */
 }
 
 .blog-post h3 {
@@ -145,7 +146,6 @@ button:hover {
     color: #e74c3c;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 2rem;
@@ -154,7 +154,7 @@ footer {
     margin-top: 3rem;
 }
 
-/* Keyframes Animation */
+/* Keyframes */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -166,9 +166,9 @@ footer {
     }
 }
 
-/* Responsive Design with Media Queries */
+/* ==================== RESPONSIVE ==================== */
 
-/* Phones - max-width 767px */
+/* Phones */
 @media (max-width: 767px) {
     header h1 {
         font-size: 2.2rem;
@@ -180,10 +180,6 @@ footer {
         text-align: center;
     }
     
-    .blog-section {
-        gap: 1.5rem;
-    }
-    
     .blog-post {
         padding: 1.5rem;
     }
@@ -193,20 +189,16 @@ footer {
     }
 }
 
-/* Tablets - 768px to 1024px */
+/* Tablets */
 @media (min-width: 768px) and (max-width: 1024px) {
     .blog-section {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-    }
-    
-    main {
-        padding: 2rem 2rem;
     }
 }
 
-/* Desktops - min-width 1025px */
+/* Desktops */
 @media (min-width: 1025px) {
     .blog-section {
         display: grid;
@@ -219,13 +211,9 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-    
-    main {
-        padding: 3rem 2rem;
-    }
 }
 
-/* Additional hover effects for form elements */
+/* Extra hover polish */
 input[type="text"]:hover,
 input[type="email"]:hover,
 textarea:hover {
